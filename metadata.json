@@ -1,0 +1,6 @@
+{
+  "name": "Yearly Salary & Expense Tracker",
+  "description": "An interactive yearly salary calculator and expense tracker with category-based spending visualization and automated savings reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

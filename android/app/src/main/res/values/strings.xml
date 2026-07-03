@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Yearly Salary &amp; Expense Tracker</string>
+    <string name="title_activity_main">Yearly Salary &amp; Expense Tracker</string>
+    <string name="package_name">com.salaryexpensetracker.app</string>
+    <string name="custom_url_scheme">com.salaryexpensetracker.app</string>
+</resources>

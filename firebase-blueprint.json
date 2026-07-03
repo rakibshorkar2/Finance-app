@@ -1,0 +1,35 @@
+{
+  "entities": {
+    "vault": {
+      "title": "BudgetVault",
+      "description": "Represents the yearly salary calculator and expense tracker data state",
+      "type": "object",
+      "properties": {
+        "salarySources": {
+          "type": "array"
+        },
+        "accounts": {
+          "type": "array"
+        },
+        "homeInflows": {
+          "type": "array"
+        },
+        "deductions": {
+          "type": "object"
+        },
+        "expenses": {
+          "type": "array"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "vaults/{vaultId}": {
+      "schema": "vault",
+      "description": "Cloud synchronized user budget vaults"
+    }
+  }
+}

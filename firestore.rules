@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Safety Net default-deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // 2. Hardened access to vaults
+    match /vaults/{vaultId} {
+      allow read, write: if isSignedIn() && isOwner(vaultId) && isValidVaultId(vaultId);
+    }
+  }
+}
+
+// Global helper functions
+function isSignedIn() {
+  return request.auth != null;
+}
+
+function isOwner(vaultId) {
+  return request.auth.uid == vaultId;
+}
+
+function isValidVaultId(vaultId) {
+  return vaultId is string 
+    && vaultId.size() >= 3 
+    && vaultId.size() <= 128 
+    && vaultId.matches('^[a-zA-Z0-9_\\-]+$');
+}
+
