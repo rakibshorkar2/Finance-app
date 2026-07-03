@@ -494,7 +494,7 @@ export default function MeowChatbot({
         deductions
       };
 
-      const response = await fetch('/api/meow/chat', {
+      const response = await fetch('https://financeapp-weld-zeta.vercel.app/api/meow/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
