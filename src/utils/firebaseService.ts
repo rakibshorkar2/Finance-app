@@ -17,20 +17,19 @@ import {
 } from 'firebase/auth';
 import { Account, IncomeSource, DeductionSettings, Expense } from '../types';
 
-// Web App Firebase Configuration from firebase-applet-config.json
+// Web App Firebase Configuration
 const firebaseConfig = {
-  projectId: "stalwart-smoke-d4dh4",
-  appId: "1:96131615250:web:240b48af0ee80cfe3a26cb",
-  apiKey: "AIzaSyBdUom2IKwsh8K0SNR08sLSk-YbpKpZp5Y",
-  authDomain: "stalwart-smoke-d4dh4.firebaseapp.com",
-  firestoreDatabaseId: "ai-studio-yearlysalaryexpe-e3f2c9f8-1bc5-4a9c-b9d3-c7bee4ac477c",
-  storageBucket: "stalwart-smoke-d4dh4.firebasestorage.app",
-  messagingSenderId: "96131615250"
+  apiKey: "AIzaSyBTirDM3pCsM6mvJAshgAxz4xzOFNNubvg",
+  authDomain: "wealtvault.firebaseapp.com",
+  projectId: "wealtvault",
+  storageBucket: "wealtvault.firebasestorage.app",
+  messagingSenderId: "875908248845",
+  appId: "1:875908248845:web:4c77981715deaa90516c44"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 

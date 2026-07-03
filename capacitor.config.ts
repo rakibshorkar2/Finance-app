@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.salaryexpensetracker.app',
+  appId: 'com.wealtvault.app',
   appName: 'WealthVault',
   webDir: 'dist'
 };
